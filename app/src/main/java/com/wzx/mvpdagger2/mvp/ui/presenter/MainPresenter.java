@@ -36,7 +36,7 @@ public class MainPresenter extends BasePresenterImpl<MainContract.View>
     }
 
     @Override
-    public void requestLogin() {
+    public void requestWeather() {
         RetrofitManager.getInstance().getTestApi().weatherAboutFuture24h("CHSH000000")
                 .compose(new ResultTransform<List<Future24>>())
                 .subscribe(new Future24Subscriber());
@@ -46,7 +46,7 @@ public class MainPresenter extends BasePresenterImpl<MainContract.View>
 
         @Override
         public void onError(Throwable e) {
-
+            view.showToast(e.getMessage());
         }
 
         @Override

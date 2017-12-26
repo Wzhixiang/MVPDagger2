@@ -20,6 +20,6 @@ public interface MainContract {
 
     interface Preseneter extends BasePresenter<View> {
         void requestText();
-        void requestLogin();
+        void requestWeather();
     }
 }

@@ -50,7 +50,7 @@ public class MainActivity extends BaseActivity<MainContract.Preseneter> implemen
 
     @Override
     protected void updateViews(boolean isRefresh) {
-        mMainPresenter.requestLogin();
+        mMainPresenter.requestWeather();
     }
 
     @Override

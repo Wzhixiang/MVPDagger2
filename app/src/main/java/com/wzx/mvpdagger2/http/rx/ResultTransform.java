@@ -9,7 +9,7 @@ import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 
 /**
- * 数据格式转换
+ * 数据结构转换（）
  *
  * @param <T>
  */
@@ -20,7 +20,7 @@ public class ResultTransform<T> implements ObservableTransformer<BaseResult<T>, 
         return upstream.map(new Function<BaseResult<T>, T>() {
             @Override
             public T apply(BaseResult<T> tBaseResult) throws Exception {
-                if (tBaseResult.isSuccess()) {
+                if (tBaseResult.isSuccess("OK")) {
                     return tBaseResult.getData();
                 } else {
                     throw new RuntimeException(tBaseResult.getMsg());

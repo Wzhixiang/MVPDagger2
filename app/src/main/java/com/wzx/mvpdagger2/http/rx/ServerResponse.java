@@ -4,12 +4,12 @@ package com.wzx.mvpdagger2.http.rx;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * 服务端基础数据结构
+ * 服务端返回数据结构
  */
 public class ServerResponse {
 
     /*另起名字*/
-    @SerializedName("sta")
+    @SerializedName("status")
     private String status;
     @SerializedName("msg")
     private String msg;

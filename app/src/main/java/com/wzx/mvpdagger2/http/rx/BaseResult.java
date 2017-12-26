@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class BaseResult<T> {
 
-    @SerializedName("sta")
+    @SerializedName("status")
     private String status;
     @SerializedName("msg")
     private String msg;
@@ -21,8 +21,8 @@ public class BaseResult<T> {
                 '}';
     }
 
-    public boolean isSuccess() {
-        return status.equals("1");
+    public boolean isSuccess(String successCode) {
+        return status.equals(successCode);
     }
 
     public String getStatus() {
