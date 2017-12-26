@@ -2,12 +2,6 @@ package com.wzx.mvpdagger2.bean;
 
 import com.google.gson.annotations.SerializedName;
 
-/**
- * 描述 TODO
- * Created by Administrator on 2017/12/25.
- * 公司名称 广州安腾网络科技有限公司
- */
-
 public class Future24 {
 /*  "text":"多云",
     "code":"4",

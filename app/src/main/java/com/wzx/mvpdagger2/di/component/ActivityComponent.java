@@ -24,14 +24,8 @@ import com.wzx.mvpdagger2.di.scope.ContextLife;
 import com.wzx.mvpdagger2.di.scope.PerActivity;
 import com.wzx.mvpdagger2.mvp.ui.MainActivity;
 
-import javax.inject.Inject;
-
 import dagger.Component;
 
-
-/**
- * Created by Administrator on 2017/3/19.
- */
 @PerActivity
 @Component(dependencies = ApplicationComponent.class, modules = ActivityModule.class)
 public interface ActivityComponent {

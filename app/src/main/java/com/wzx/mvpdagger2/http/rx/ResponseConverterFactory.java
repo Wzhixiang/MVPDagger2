@@ -11,9 +11,6 @@ import okhttp3.ResponseBody;
 import retrofit2.Converter;
 import retrofit2.Retrofit;
 
-/**
- * Created by Administrator on 2017/6/6.
- */
 
 public class ResponseConverterFactory extends Converter.Factory {
 

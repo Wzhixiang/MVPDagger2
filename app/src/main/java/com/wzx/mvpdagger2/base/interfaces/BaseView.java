@@ -1,8 +1,5 @@
 package com.wzx.mvpdagger2.base.interfaces;
 
-/**
- * Created by Administrator on 2017/3/20.
- */
 public interface BaseView {
     /**
      * 显示加载动画

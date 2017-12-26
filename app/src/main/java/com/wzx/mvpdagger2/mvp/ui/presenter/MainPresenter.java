@@ -14,12 +14,6 @@ import java.util.List;
 
 import io.reactivex.disposables.Disposable;
 
-/**
- * 描述 TODO
- * Created by Administrator on 2017/11/3.
- * 公司名称 广州安腾网络科技有限公司
- */
-
 public class MainPresenter extends BasePresenterImpl<MainContract.View>
         implements MainContract.Preseneter {
 

@@ -14,10 +14,6 @@ import com.wzx.mvpdagger2.di.module.FragmentModule;
 
 import butterknife.ButterKnife;
 
-/**
- *
- * Created by Administrator on 2017/3/20.
- */
 public abstract class BaseMvpFragment<T extends BasePresenter> extends Fragment implements BaseView {
 
     protected T mPresenter;

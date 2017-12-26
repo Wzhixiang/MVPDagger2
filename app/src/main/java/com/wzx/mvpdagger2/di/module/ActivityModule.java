@@ -27,9 +27,6 @@ import com.wzx.mvpdagger2.mvp.ui.presenter.MainPresenter;
 import dagger.Module;
 import dagger.Provides;
 
-/**
- * Created by Administrator on 2017/3/19.
- */
 @Module
 public class ActivityModule {
     private Activity mActivity;

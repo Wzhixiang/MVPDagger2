@@ -20,10 +20,6 @@ import com.wzx.mvpdagger2.di.module.ActivityModule;
 
 import butterknife.ButterKnife;
 
-/**
- * 基础
- * @param <T>
- */
 public abstract class BaseActivity<T extends BasePresenter> extends AppCompatActivity
         implements BaseView {
 

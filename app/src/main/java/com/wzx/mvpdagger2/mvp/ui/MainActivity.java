@@ -16,9 +16,6 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-/**
- *
- */
 public class MainActivity extends BaseActivity<MainContract.Preseneter> implements MainContract.View {
 
     @BindView(R.id.tv_result)

@@ -22,10 +22,6 @@ import java.lang.annotation.RetentionPolicy;
 
 import javax.inject.Scope;
 
-
-/**
- * Created by Administrator on 2017/3/19.
- */
 @Scope
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
