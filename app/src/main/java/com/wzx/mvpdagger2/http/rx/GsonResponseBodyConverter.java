@@ -36,7 +36,7 @@ public class GsonResponseBodyConverter<T> implements Converter<ResponseBody, T> 
             serverResponse = new ServerResponse("0", "服务器异常");
         }
 
-        if (serverResponse.isSuccess()) {
+        if (serverResponse.isSuccess("OK")) {
             return gson.fromJson(response, type);
         } else {
             throw new RuntimeException(serverResponse.getMsg());

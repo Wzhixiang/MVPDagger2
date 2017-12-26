@@ -4,11 +4,13 @@ import android.support.annotation.NonNull;
 
 import com.wzx.mvpdagger2.base.AppCommont;
 import com.wzx.mvpdagger2.base.BasePresenterImpl;
-import com.wzx.mvpdagger2.bean.User;
+import com.wzx.mvpdagger2.bean.Future24;
 import com.wzx.mvpdagger2.http.RetrofitManager;
 import com.wzx.mvpdagger2.http.rx.BaseSubscriber;
 import com.wzx.mvpdagger2.http.rx.ResultTransform;
 import com.wzx.mvpdagger2.mvp.ui.contract.MainContract;
+
+import java.util.List;
 
 import io.reactivex.disposables.Disposable;
 
@@ -35,12 +37,12 @@ public class MainPresenter extends BasePresenterImpl<MainContract.View>
 
     @Override
     public void requestLogin() {
-        RetrofitManager.getInstance().getTestApi().login("13726778891", "123456")
-                .compose(new ResultTransform<User>())
-                .subscribe(new LoginSubscriber());
+        RetrofitManager.getInstance().getTestApi().weatherAboutFuture24h("CHSH000000")
+                .compose(new ResultTransform<List<Future24>>())
+                .subscribe(new Future24Subscriber());
     }
 
-    private class LoginSubscriber extends BaseSubscriber<User> {
+    private class Future24Subscriber extends BaseSubscriber<List<Future24>> {
 
         @Override
         public void onError(Throwable e) {
@@ -58,8 +60,8 @@ public class MainPresenter extends BasePresenterImpl<MainContract.View>
         }
 
         @Override
-        public void onNext(User user) {
-            view.showResult(user);
+        public void onNext(List<Future24> list) {
+            view.showResult(list);
         }
     }
 

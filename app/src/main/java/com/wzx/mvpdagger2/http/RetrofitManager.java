@@ -25,7 +25,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
 public class RetrofitManager {
 
-    public static String baseUrl = "http://www.waory.cn/";
+    public static String baseUrl = "http://tj.nineton.cn/";
     private final Retrofit mRetrofit;
 
     /**

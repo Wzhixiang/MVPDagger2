@@ -19,8 +19,8 @@ public class ServerResponse {
         this.msg = msg;
     }
 
-    public boolean isSuccess() {
-        return status.equals("1");
+    public boolean isSuccess(String successCode) {
+        return status.equals(successCode);
     }
 
     public String getStatus() {

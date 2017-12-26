@@ -17,14 +17,6 @@ import retrofit2.Retrofit;
 
 public class ResponseConverterFactory extends Converter.Factory {
 
-    //    public static ResponseConverterFactory create() {
-//        return create(new GsonBuilder().registerTypeAdapter(String.class, new JsonTypeEmptyAdapter()).create());
-//    }
-//    public static ResponseConverterFactory create() {
-//        return create(new GsonBuilder().serializeNulls()
-//                .registerTypeAdapter(String.class, new JsonTypeEmptyAdapter()).create());
-//    }
-//
     public static ResponseConverterFactory create() {
         return create(new GsonBuilder().serializeNulls().create());
     }
@@ -37,7 +29,9 @@ public class ResponseConverterFactory extends Converter.Factory {
     private final Gson gson;
 
     private ResponseConverterFactory(Gson gson) {
-        if (gson == null) throw new NullPointerException("gson == null");
+        if (gson == null) {
+            throw new NullPointerException("gson == null");
+        }
         this.gson = gson;
     }
 
@@ -49,7 +43,9 @@ public class ResponseConverterFactory extends Converter.Factory {
 
     @Override
     public Converter<?, RequestBody> requestBodyConverter(Type type,
-                                                          Annotation[] parameterAnnotations, Annotation[] methodAnnotations, Retrofit retrofit) {
+                                                          Annotation[] parameterAnnotations,
+                                                          Annotation[] methodAnnotations,
+                                                          Retrofit retrofit) {
         //返回我们自定义的Gson响应体变换器
         return new GsonResponseBodyConverter<>(gson, type);
     }

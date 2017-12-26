@@ -9,7 +9,7 @@ public class BaseResult<T> {
     private String status;
     @SerializedName("msg")
     private String msg;
-    @SerializedName("data")
+    @SerializedName("hourly")
     private T data;
 
     @Override

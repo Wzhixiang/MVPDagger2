@@ -1,13 +1,13 @@
 package com.wzx.mvpdagger2.http.api;
 
-import com.wzx.mvpdagger2.bean.User;
+import com.wzx.mvpdagger2.bean.Future24;
 import com.wzx.mvpdagger2.http.rx.BaseResult;
 
+import java.util.List;
+
 import io.reactivex.Observable;
-import retrofit2.http.Field;
-import retrofit2.http.FormUrlEncoded;
-import retrofit2.http.Headers;
-import retrofit2.http.POST;
+import retrofit2.http.GET;
+import retrofit2.http.Query;
 
 /**
  * 描述 TODO
@@ -17,10 +17,7 @@ import retrofit2.http.POST;
 
 public interface TestApi {
 
-    @FormUrlEncoded
-    @POST("user/user_login")
-    @Headers("Content-Type:application/x-www-form-urlencoded;charset=utf-8")
-    Observable<BaseResult<User>> login(@Field("name") String phone,
-                                       @Field("password") String password);
+    @GET("Heart/index/future24h/")
+    Observable<BaseResult<List<Future24>>> weatherAboutFuture24h(@Query("city") String cityCode);
 
 }

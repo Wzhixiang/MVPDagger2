@@ -5,9 +5,11 @@ import android.widget.Toast;
 
 import com.wzx.mvpdagger2.R;
 import com.wzx.mvpdagger2.base.BaseActivity;
-import com.wzx.mvpdagger2.bean.User;
+import com.wzx.mvpdagger2.bean.Future24;
 import com.wzx.mvpdagger2.mvp.ui.contract.MainContract;
 import com.wzx.mvpdagger2.mvp.ui.presenter.MainPresenter;
+
+import java.util.List;
 
 import javax.inject.Inject;
 
@@ -24,7 +26,6 @@ public class MainActivity extends BaseActivity<MainContract.Preseneter> implemen
 
     @OnClick(R.id.tv_result)
     void onTextClick() {
-        showToast("点击事件");
         mMainPresenter.requestText();
     }
 
@@ -89,9 +90,7 @@ public class MainActivity extends BaseActivity<MainContract.Preseneter> implemen
 
 
     @Override
-    public void showResult(User result) {
-        if (mTextView != null) {
-            mTextView.setText(result.getUsername());
-        }
+    public void showResult(List<Future24> list) {
+        mTextView.setText(list == null ? "0" : "" + list.size());
     }
 }
